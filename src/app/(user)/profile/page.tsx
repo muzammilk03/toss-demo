@@ -1,6 +1,6 @@
 "use client";
-import UserPostedJobs from "./components/UserPostedJobs";
 import { Tab } from "@headlessui/react";
+import UserPostedJobs from "./components/UserPostedJobs";
 import UserProfile from "./components/UserProfile";
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
