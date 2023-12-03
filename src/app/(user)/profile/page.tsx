@@ -1,7 +1,6 @@
 "use client";
 import UserPostedJobs from "./components/UserPostedJobs";
 import { Tab } from "@headlessui/react";
-import { useState } from "react";
 import UserProfile from "./components/UserProfile";
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
@@ -31,16 +30,12 @@ const TabPanelItem = ({ children }) => {
 };
 
 const ProfilePage = () => {
-  const [selectedIndex, setSelectedIndex] = useState(0);
+
 
   return (
     <main className=" mx-auto grid h-full w-full max-w-7xl gap-10 px-4 pb-16 md:grid-cols-[minmax(150px,250px)_1fr] md:py-10 ">
-      <Tab.Group
-        selectedIndex={selectedIndex}
-        onChange={setSelectedIndex}
-        vertical
-      >
-        <Tab.List className={"flex h-fit flex-col justify-start gap-4 p-2 "}>
+      <Tab.Group >
+        <Tab.List >
           <TabItem title={"Profile"} />
           <TabItem title={"Posted Jobs"} />
         </Tab.List>
