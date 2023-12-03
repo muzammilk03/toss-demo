@@ -1,8 +1,6 @@
 "use client";
 import { useSession } from "next-auth/react";
 import { toast } from "react-hot-toast";
-import PageHeading from "~/components/PageHeading";
-import UserJobListForm from "./components/UserJobListForm";
 
 const JobList = () => {
   const { data: session } = useSession();
@@ -11,12 +9,9 @@ const JobList = () => {
   }
   return (
     <main className=" mx-auto w-full max-w-7xl px-4">
-      <PageHeading
-        title="List New Job"
-        subtitle="Fill this form and wait for admin approval on approval job listing will
-        be visible on website"
-      />
-      <UserJobListForm />
+      <h2 className=" pt-4 text-[clamp(1.3rem,6vw,2rem)] font-medium capitalize text-gray-900">
+        Add New Job
+      </h2>
     </main>
   );
 };
